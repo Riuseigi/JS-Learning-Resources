@@ -1,0 +1,30 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+#myH1{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    min-height: auto;
+    min-width: 700px;
+    justify-content: center;
+    gap: 15px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: aqua;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+button:active, button:hover{
+    background-color: blue;
+    color: aliceblue;
+}
