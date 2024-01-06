@@ -1,0 +1,30 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 2rem;
+}
+
+
+h2{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    place-content: center;
+    column-gap: 4px;
+}
+
+input{
+    width: 100%;
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+}
+
+
+
+
