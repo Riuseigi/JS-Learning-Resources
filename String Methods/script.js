@@ -74,7 +74,7 @@ let userName = "Riuseigi "
 // phoneNumber = phoneNumber.padStart("15","0")
 // console.log(phoneNumber)
 
-//padStart = basta nagoccupy sa end ng character maachieve niya gusto mong ilagay na count
+//padEnd = basta nagoccupy sa end ng character maachieve niya gusto mong ilagay na count
 let phoneNumber = "123-456-7890"
 phoneNumber = phoneNumber.padEnd("15","0")
 console.log(phoneNumber)
