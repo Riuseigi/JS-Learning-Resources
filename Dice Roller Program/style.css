@@ -1,7 +1,66 @@
 body{
     font-family: Arial, Helvetica, sans-serif sans-serif;
     font: 2em;
-    background-color: rgb(165, 170, 175);
+    
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+label{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#numDice{
+    font-size: 2em;
+    padding: 10px 20px;
+    text-align: center;
+    width: 150px;
+    border-radius: 15px;
+}
+
+button{
+    font-size: 2rem;
+    padding: .3em;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    border-radius: 15px;
+
+}
+
+button:hover{
+    background-color: rgb(118, 147, 199)
+}
+
+#diceImages{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    
+    
+}
+img{
+    
+    width: 150px;
+    height: 150px;
+}
+
+#diceResult{
+    margin-top: 40px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 
