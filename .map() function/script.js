@@ -36,14 +36,41 @@
 
 //3rd example 
 
-const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
+// const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
 
-const formats = dates.map(formatDates)
-console.log(formats)
-function formatDates(element){
-    const parts = element.split("-")
-    return `${parts[1]}|${parts[2]}|${parts[0]}`
+// const formats = dates.map(formatDates)
+// console.log(formats)
+// function formatDates(element){
+//     const parts = element.split("-")
+//     return `${parts[1]}|${parts[2]}|${parts[0]}`
+// }
+
+
+// Mahchine problem 1 = Filtering Even Numbers
+
+// Create an array of numbers from 1 to 20.
+// Use forEach to print only the even numbers in the array.
+// Use map to create a new array containing only the even numbers.
+
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+let evenNumbersArray = numbers.map(evenNumber).filter(Boolean)
+
+
+evenNumbersArray.forEach(displayConsole)
+
+function evenNumber(element){
+    return element % 2 === 0 ? element : null
 }
+function displayConsole(element){
+    console.log(element)
+}
+
+
+
+
+
+
 
 
 
