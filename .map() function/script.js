@@ -47,6 +47,10 @@
 // }
 
 
+
+
+
+
 // Mahchine problem 1 = Filtering Even Numbers
 
 // Create an array of numbers from 1 to 20.
@@ -66,15 +70,9 @@
 // function displayConsole(element){
 //     console.log(element)
 // }
-// const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
 
-// const formats = dates.map(formatDates)
-// console.log(formats)
-// function formatDates(element){
-//     const parts = element.split("-")
-//     return `${parts[1]}|${parts[2]}|${parts[0]}`
 
-// }
+
 
 
 // Mahchine problem 2 = Word Lengths:
@@ -87,6 +85,7 @@ const wordsArray=["Code","Eating","Workout","Reading"]
 
 
 const lenghtOfWords = wordsArray.map(numofChars)
+
 lenghtOfWords.forEach(displayLog)
 
 function numofChars(element){
