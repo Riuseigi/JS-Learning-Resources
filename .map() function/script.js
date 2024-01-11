@@ -53,29 +53,54 @@
 // Use forEach to print only the even numbers in the array.
 // Use map to create a new array containing only the even numbers.
 
-let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+// let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-let evenNumbersArray = numbers.map(evenNumber).filter(Boolean)
+// let evenNumbersArray = numbers.map(evenNumber).filter(Boolean)
 
 
-evenNumbersArray.forEach(displayConsole)
+// evenNumbersArray.forEach(displayConsole)
 
-function evenNumber(element){
-    return element % 2 === 0 ? element : null
+// function evenNumber(element){
+//     return element % 2 === 0 ? element : null
+// }
+// function displayConsole(element){
+//     console.log(element)
+// }
+// const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
+
+// const formats = dates.map(formatDates)
+// console.log(formats)
+// function formatDates(element){
+//     const parts = element.split("-")
+//     return `${parts[1]}|${parts[2]}|${parts[0]}`
+
+// }
+
+
+// Mahchine problem 2 = Word Lengths:
+// Create an array of words.
+// Use forEach to log the length of each word to the console.
+// Use map to create a new array containing the lengths of each word.
+
+
+const wordsArray=["Code","Eating","Workout","Reading"]
+
+
+const lenghtOfWords = wordsArray.map(numofChars)
+lenghtOfWords.forEach(displayLog)
+
+function numofChars(element){
+    return `${element}: ${element.length}`
 }
-function displayConsole(element){
+
+function displayLog(element){
     console.log(element)
 }
-const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
 
-const formats = dates.map(formatDates)
-console.log(formats)
-function formatDates(element){
-    const parts = element.split("-")
-    return `${parts[1]}|${parts[2]}|${parts[0]}`
-
-}
-
+// Code: 4
+// script.js:97 Eating: 6
+// script.js:97 Workout: 7
+// script.js:97 Reading: 7
 
 
 
