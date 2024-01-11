@@ -36,6 +36,7 @@
 
 //3rd example 
 
+<<<<<<< HEAD
 // const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
 
 // const formats = dates.map(formatDates)
@@ -64,6 +65,15 @@ function evenNumber(element){
 }
 function displayConsole(element){
     console.log(element)
+=======
+const dates = ["2010-1-10", "2025-2-20", "2026-3-30"]
+
+const formats = dates.map(formatDates)
+console.log(formats)
+function formatDates(element){
+    const parts = element.split("-")
+    return `${parts[1]}|${parts[2]}|${parts[0]}`
+>>>>>>> 81a7652b5c4dd3f142bb4bb6ab59e62d3a1005b9
 }
 
 
@@ -74,9 +84,12 @@ function displayConsole(element){
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 81a7652b5c4dd3f142bb4bb6ab59e62d3a1005b9
