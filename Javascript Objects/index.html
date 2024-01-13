@@ -6,6 +6,45 @@
     <title>JS Learning</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Simple Calculator</h1>
+      <div class="inputs">
+        <input type="number" name="num1" id="num1" />
+        <input type="number" name="num2" id="num2" />
+      </div>
+      <div class="choices">
+        <div>
+          <input type="radio" name="arithmetic" id="add" value="add" />
+          <label for="add">Add</label>
+        </div>
+
+        <div class="">
+          <input
+            type="radio"
+            name="arithmetic"
+            id="substract"
+            value="substract"
+          />
+          <label for="substract">Substract</label>
+        </div>
+        <div class="">
+          <input
+            type="radio"
+            name="arithmetic"
+            id="multiply"
+            value="multiply"
+          />
+          <label for="multiply">Multiply</label>
+        </div>
+        <div class="">
+          <input type="radio" name="arithmetic" id="divide" value="divide" />
+          <label for="divide">Divide</label>
+        </div>
+      </div>
+      <button type="submit" id="submit">Sumbit</button>
+      <p id="result"></p>
+    </div>
+  </body>
   <script src="script.js"></script>
 </html>
