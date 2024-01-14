@@ -1,4 +1,5 @@
 // class = {EST feature} provides fa more structured and cleaner way to work with objects compared to traditional constructor functions. ex. Static keyword, encapsulation, inheritance
+// Classes define blueprints for creating objects with properties and methods.
 
 // Example of Constructor method
 // function Product(name, price){
