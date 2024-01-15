@@ -50,6 +50,7 @@ class BankAccount{
     this.initialBalance = initialBalance;
     this.ownerName = ownerName;
     this.accountNumber =ownerName
+    this._balance = initialBalance; // Use private property for balance
     BankAccount.balance+=initialBalance
   }
   deposit(amount){
@@ -58,21 +59,22 @@ class BankAccount{
   checkBalance(){
     console.log(`Hi ${this.ownerName}, Your Balance is: ${BankAccount.balance}`)
   }
-  withdraw(amount){
-    if(BankAccount.balance<amount){
-      console.log(`Sorry ${this.ownerName}, you are insufficient funds`)
-    }
-    else{
-      return BankAccount.balance-=amount
+  _updateBalance(amount) {
+    if (this._balance <= amount) {
+      this._balance -= amount;
+      BankAccount.balance -= amount;
+      return true; // Indicate successful withdrawal or transfer
+    } else {
+      console.log(`Sorry ${this.ownerName}, you have insufficient funds`);
+      return false;
     }
   }
-  transfer(amount,transferName){
-    if(BankAccount.balance<amount){
-      console.log(`Sorry ${this.ownerName}, you are insufficient funds`)
-    }
-    else{
-      BankAccount.balance-=amount
-      console.log(`You are transferred funds to ${transferName} with ${amount}`)
+  withdraw(amount){
+    return this._updateBalance(amount);
+  }
+  transfer(amount, transferName) {
+    if (this._updateBalance(amount)) {
+      console.log(`You are transferred funds to ${transferName} with ${amount}`);
     }
   }
 
@@ -80,10 +82,11 @@ class BankAccount{
 
 
 const troy = new BankAccount('Troy',0,1234567)
-troy.deposit(100)
-troy.withdraw(50)
+
 troy.checkBalance()
-troy.transfer(20,"Diana")
+troy.deposit(100)
+troy.checkBalance()
+troy.withdraw(10)
 troy.checkBalance()
 
 
