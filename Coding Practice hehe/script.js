@@ -48,9 +48,15 @@ class BankAccount {
 
   constructor(ownerName, initialBalance, accountNumber) {
     this.ownerName = ownerName;
+<<<<<<< HEAD
     this.accountNumber = accountNumber;
     this._balance = initialBalance; // Use private property for balance
     BankAccount.#balance += initialBalance;
+=======
+    this.accountNumber =ownerName
+    this._balance = initialBalance; // Use private property for balance
+    BankAccount.balance+=initialBalance
+>>>>>>> 13a0329725fcd6e4e83bf84b8600c168458a0b79
   }
 
   deposit(amount) {
@@ -62,15 +68,33 @@ class BankAccount {
   checkBalance() {
     console.log(`Hi ${this.ownerName}, Your Balance is: ${this._balance}`);
   }
+<<<<<<< HEAD
 
   _updateBalance(amount) {
     if (this._balance >= amount) {
       this._balance -= amount;
       BankAccount.#balance -= amount;
+=======
+  _updateBalance(amount) {
+    if (this._balance <= amount) {
+      this._balance -= amount;
+      BankAccount.balance -= amount;
+>>>>>>> 13a0329725fcd6e4e83bf84b8600c168458a0b79
       return true; // Indicate successful withdrawal or transfer
     } else {
       console.log(`Sorry ${this.ownerName}, you have insufficient funds`);
       return false;
+<<<<<<< HEAD
+=======
+    }
+  }
+  withdraw(amount){
+    return this._updateBalance(amount);
+  }
+  transfer(amount, transferName) {
+    if (this._updateBalance(amount)) {
+      console.log(`You are transferred funds to ${transferName} with ${amount}`);
+>>>>>>> 13a0329725fcd6e4e83bf84b8600c168458a0b79
     }
   }
 
@@ -95,6 +119,16 @@ account1.transfer(300, "Friend");
 account1.checkBalance();
 
 
+<<<<<<< HEAD
+=======
+const troy = new BankAccount('Troy',0,1234567)
+
+troy.checkBalance()
+troy.deposit(100)
+troy.checkBalance()
+troy.withdraw(10)
+troy.checkBalance()
+>>>>>>> 13a0329725fcd6e4e83bf84b8600c168458a0b79
 
 
 
