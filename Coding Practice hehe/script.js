@@ -43,48 +43,58 @@
 // Handle errors gracefully (e.g., insufficient funds).
 
 
-class BankAccount{
+class BankAccount {
+  static #balance = 0;
 
-  static balance =0;
-  constructor(ownerName,initialBalance,accountNumber){
-    this.initialBalance = initialBalance;
+  constructor(ownerName, initialBalance, accountNumber) {
     this.ownerName = ownerName;
-    this.accountNumber =ownerName
-    BankAccount.balance+=initialBalance
+    this.accountNumber = accountNumber;
+    this._balance = initialBalance; // Use private property for balance
+    BankAccount.#balance += initialBalance;
   }
-  deposit(amount){
-    return BankAccount.balance+= amount
+
+  deposit(amount) {
+    this._balance += amount;
+    BankAccount.#balance += amount;
+    return this._balance;
   }
-  checkBalance(){
-    console.log(`Hi ${this.ownerName}, Your Balance is: ${BankAccount.balance}`)
+
+  checkBalance() {
+    console.log(`Hi ${this.ownerName}, Your Balance is: ${this._balance}`);
   }
-  withdraw(amount){
-    if(BankAccount.balance<amount){
-      console.log(`Sorry ${this.ownerName}, you are insufficient funds`)
-    }
-    else{
-      return BankAccount.balance-=amount
-    }
-  }
-  transfer(amount,transferName){
-    if(BankAccount.balance<amount){
-      console.log(`Sorry ${this.ownerName}, you are insufficient funds`)
-    }
-    else{
-      BankAccount.balance-=amount
-      console.log(`You are transferred funds to ${transferName} with ${amount}`)
+
+  _updateBalance(amount) {
+    if (this._balance >= amount) {
+      this._balance -= amount;
+      BankAccount.#balance -= amount;
+      return true; // Indicate successful withdrawal or transfer
+    } else {
+      console.log(`Sorry ${this.ownerName}, you have insufficient funds`);
+      return false;
     }
   }
 
+  withdraw(amount) {
+    return this._updateBalance(amount);
+  }
+
+  transfer(amount, transferName) {
+    if (this._updateBalance(amount)) {
+      console.log(`You transferred funds to ${transferName} with ${amount}`);
+    }
+  }
 }
 
+// Example usage:
+const account1 = new BankAccount("John Doe", 1000, "123456");
+account1.deposit(500);
+account1.checkBalance();
+account1.withdraw(200);
+account1.checkBalance();
+account1.transfer(300, "Friend");
+account1.checkBalance();
 
-const troy = new BankAccount('Troy',0,1234567)
-troy.deposit(100)
-troy.withdraw(50)
-troy.checkBalance()
-troy.transfer(20,"Diana")
-troy.checkBalance()
+
 
 
 
