@@ -93,6 +93,19 @@ displayPerson(person2)
 
 
 
+// Machine Problem 1
+// Swapping Variables:
+
+// Write a function that swaps the values of two variables using destructuring.
+
+
+function swapValues(a,b){
+   [a,b] = [b,a]
+   console.log(`a: ${a}`)
+   console.log(`b: ${b}`)
+}
+
+swapValues(8,9)
 
 
 
