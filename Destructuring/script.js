@@ -107,5 +107,19 @@ function swapValues(a,b){
 
 swapValues(8,9)
 
+//Machine problem 2
+
+// Combining Arrays:
+
+// Combine two arrays, [1, 2, 3] and [4, 5, 6], into a single array using destructuring and the spread operator.
+
+const array1 = [1,2,3]
+const array2 = [4,5,6]
+
+const combineArray = [...array1,...array2]
+
+console.log(combineArray)
+
+
 
 
