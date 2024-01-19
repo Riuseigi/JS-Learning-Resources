@@ -1,5 +1,9 @@
 // sort() = method used to sort elements of an array in place.
+<<<<<<< HEAD
 //          Sorts elements as strings in lexicographic order, not alphabetical.
+=======
+//          Sorts elements as strings in lexicographic orde, not alphabetical.
+>>>>>>> e43f121b9c6fd6f8ff5fbb3e592509874fa4e72d
 //          lexicographic = (alphabet + numbers + symbols)
 
 // Example 1
