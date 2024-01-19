@@ -88,32 +88,129 @@
 // Task:
 
 // Create an array of objects representing tasks, each with properties name, priority (a number from 1 to 5), and completed (a boolean).
-const tasks =[{name:"Coding",priority:5,completed:true},
-              {name:"Reading a book",priority:3,completed:false},
-              {name:"Caretaking Grandma",priority:4,completed:true},
-              {name:"Cook Meal",priority:2,completed:false},
-              {name:"Workout",priority:5,completed:false},
-              {name:"Bebe time",priority:5,completed:true},]
+// const tasks =[{name:"Coding",priority:5,completed:true},
+//               {name:"Reading a book",priority:3,completed:false},
+//               {name:"Caretaking Grandma",priority:4,completed:true},
+//               {name:"Cook Meal",priority:2,completed:false},
+//               {name:"Workout",priority:5,completed:false},
+//               {name:"Bebe time",priority:5,completed:true},]
 
 // Use forEach to print a list of all tasks with their priority levels.
-tasks.forEach((task) => {
-    console.log(`Task: ${task.name}  Priority Level:${task.priority}`)
-})
+// tasks.forEach((task) => {
+//     console.log(`Task: ${task.name}  Priority Level:${task.priority}`)
+// })
 // Use map to create a new array containing only the names of incomplete tasks.
-const incompleteTask = tasks.map((task) => 
-   (task.completed !== true ? task.name : null)
-).filter(Boolean)
-console.log(incompleteTask)
+// const incompleteTask = tasks.map((task) => 
+//    (task.completed !== true ? task.name : null)
+// ).filter(Boolean)
+// console.log(incompleteTask)
 
 
 // Use filter to create a new array containing only high-priority tasks (priority 4 or 5).
-const highPriority = tasks.filter((task)=> task.priority > 3)
-console.log(highPriority)
+// const highPriority = tasks.filter((task)=> task.priority > 3)
+// console.log(highPriority)
 
 // Use reduce to calculate the total number of completed tasks.
-const totalCompleted = tasks.reduce((acc, task) => {
-  // Increment the accumulator if the task is completed
-  return task.completed ? acc + 1 : acc;
-}, 0);
-console.log(totalCompleted)
+// const totalCompleted = tasks.reduce((acc, task) => {
+//   // Increment the accumulator if the task is completed
+//   return task.completed ? acc + 1 : acc;
+// }, 0);
+// console.log(totalCompleted)
 
+// Coding practice 2
+
+// Here's another coding exercise to help you practice array methods:
+
+// Task:
+
+// Create an array of objects representing books, with properties like title, author, genre, pages, and rating (a number from 1 to 5).
+const books = [
+  {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    genre: 'Fiction',
+    pages: 180,
+    rating: 4.5
+  },
+  {
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    genre: 'Fiction',
+    pages: 336,
+    rating: 3.8
+  },
+  {
+    title: '1984',
+    author: 'George Orwell',
+    genre: 'Dystopian',
+    pages: 328,
+    rating: 2.6
+  },
+  {
+    title: 'The Hobbit',
+    author: 'J.R.R. Tolkien',
+    genre: 'Fantasy',
+    pages: 310,
+    rating: 4.7
+  },
+  {
+    title: 'Pride and Prejudice',
+    author: 'Jane Austen',
+    genre: 'Classic',
+    pages: 432,
+    rating: 1.2
+  },
+  {
+    title: 'The Catcher in the Rye',
+    author: 'J.D. Salinger',
+    genre: 'Coming-of-age',
+    pages: 224,
+    rating: 2.0
+  },
+  {
+    title: 'Harry Potter and the Sorcerer\'s Stone',
+    author: 'J.K. Rowling',
+    genre: 'Fantasy',
+    pages: 320,
+    rating: 3.9
+  },
+  {
+    title: 'The Lord of the Rings',
+    author: 'J.R.R. Tolkien',
+    genre: 'Fantasy',
+    pages: 1178,
+    rating: 4.9
+  },
+  {
+    title: 'The Da Vinci Code',
+    author: 'Dan Brown',
+    genre: 'Mystery',
+    pages: 597,
+    rating: 4.1
+  },
+  {
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+    genre: 'Dystopian',
+    pages: 374,
+    rating: 4.3
+  }
+];
+
+
+// Use forEach to print a list of all books with their titles and genres.
+
+books.forEach((book)=> console.log(`Book Name: ${book.title} Genre:${book.genre}`))
+// Use map to create an array containing only book titles with a rating of 4 or higher.
+const highRating = books.map((book)=> book.rating >3 ? book.title:null).filter(Boolean)
+console.log(highRating)
+
+// Use filter to create an array of books belonging to a specific genre (e.g., "fantasy")
+const fictionBook = books.filter((book)=>book.genre ==="Fiction")
+const fantasyBook = books.filter((book)=>book.genre ==="Fantasy")
+const dystopianBook = books.filter((book)=>book.genre ==="Dystopian")
+const classicsBook = books.filter((book)=>book.genre ==="Classic")
+console.log(classicsBook)
+// Use reduce to calculate the total number of pages for all books.
+const totalPagesBooks = books.reduce((acc,book)=>acc+book.pages,0)
+console.log(totalPagesBooks)
