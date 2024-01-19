@@ -1,9 +1,5 @@
 // sort() = method used to sort elements of an array in place.
-<<<<<<< HEAD
 //          Sorts elements as strings in lexicographic order, not alphabetical.
-=======
-//          Sorts elements as strings in lexicographic orde, not alphabetical.
->>>>>>> e43f121b9c6fd6f8ff5fbb3e592509874fa4e72d
 //          lexicographic = (alphabet + numbers + symbols)
 
 // Example 1
@@ -49,7 +45,15 @@ const people = [{name:"Spongebob", age:30, gpa: 3.0},
                 {name:"Spongebob", age:27, gpa: 1.0},]
 
 
-people.sort((a,b)=> a.age-b.age)// ascending order by age
-people.sort((a,b)=> a.gpa-b.gpa)// ascending order by gpa
-people.sort((a,b)=> a.name.localeCompare(b.name))
-console.log(people)
+// people.sort((a,b)=> a.age-b.age)// ascending order by age
+// people.sort((a,b)=> a.gpa-b.gpa)// ascending order by gpa
+// people.sort((a,b)=> a.name.localeCompare(b.name))
+// console.log(people)
+
+
+// Sort by age, then name if ages are equal
+people.sort((a, b) => {
+  if (a.age !== b.age) return a.age - b.age;
+  return a.name.localeCompare(b.name);
+});
+console.log(people); 
