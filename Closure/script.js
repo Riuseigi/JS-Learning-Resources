@@ -44,25 +44,50 @@
 //     counter.getCount()}`) //The current counter is 4
 
 //Example 3
-function scorePoints(){
-    let score = 0;
-    function increaseScore(points){
-            score += points;
-            console.log(`+${points}pts`)
-    }
-    function decreaseScore(points){
-        score -= points;
-        console.log(`-${points}pts`)
-    }
-    function getScore(){
-        return score;
-    }
-    return {increaseScore,decreaseScore,getScore}
-}
+// function scorePoints(){
+//     let score = 0;
+//     function increaseScore(points){
+//             score += points;
+//             console.log(`+${points}pts`)
+//     }
+//     function decreaseScore(points){
+//         score -= points;
+//         console.log(`-${points}pts`)
+//     }
+//     function getScore(){
+//         return score;
+//     }
+//     return {increaseScore,decreaseScore,getScore}
+// }
 
-const player = scorePoints();
-player.score = 0;
-player.increaseScore(5);
-player.increaseScore(6);
-player.decreaseScore(3);
-console.log(`The Final Score is ${player.getScore()}pts`)
+// const player = scorePoints();
+// player.score = 0;
+// player.increaseScore(5);
+// player.increaseScore(6);
+// player.decreaseScore(3);
+// console.log(`The Final Score is ${player.getScore()}pts`)
+
+//Example 4  Implementing modules and namespaces:
+const mathFunctions = (function() {
+    let pi = 3.14159;
+  
+    return {
+      calculateArea: function(radius) {
+        return pi * radius * radius;
+      },
+      calculateCircumference: function(radius) {
+        return 2 * pi * radius;
+      }
+    };
+  })();
+  
+  console.log(mathFunctions.calculateArea(5));
+
+
+  // Example 5 Implementing partial application
+  function add(x, y) {
+    return x + y;
+  }
+  
+  const add5 = add.bind(null, 5);
+  console.log(add5(3));  // 8
