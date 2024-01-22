@@ -1,0 +1,29 @@
+body{
+    background-image: url(https://wallpapers.com/images/hd/stoicism-0s0l8hyo16wgpnq3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+
+#clockContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 10rem;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(15px);
+    background-color: hsl(0, 0%, 100%,.01);
+    width: 100%;
+}
+
+
+
