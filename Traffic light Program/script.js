@@ -5,31 +5,9 @@ let isRunning = false;
 let timeoutID;
 let currentLight = 'red';
 const lights = document.querySelectorAll(".light");
-function switchLights() {
-  
-
-  
-  // Determine which light to turn on
- 
-}
-
-// Initialize the current light
 
 
-
-
-function start(){
-  
-  intervalID = setInterval(traffic, timers[counter]);
-  
-}
-function stop(){
-  clearInterval(intervalID);
-  clearTimeout(timeoutID);
-}
-
-
-function traffic() {
+function start() {
   // Reset all lights to default color
   lights.forEach(light => light.style.backgroundColor = '#ccc');
  
@@ -37,9 +15,8 @@ function traffic() {
   counter = (counter + 1) % timers.length;
   // Clear previous interval and set a new one with the updated timer value
   clearInterval(intervalID);
-  
-  intervalID = setInterval(traffic, timers[counter]);
-  console.log(counter)
+  intervalID = setInterval(start, timers[counter]);
+   // Determine which light to turn on
   switch (currentLight) {
     case 'red':
       lights[0].style.backgroundColor = 'red';
@@ -54,6 +31,10 @@ function traffic() {
       currentLight = 'yellow';
       break;
   }
+}
+function stop(){
+  clearInterval(intervalID);
+  clearTimeout(timeoutID);
 }
 
 function toggleLightCycle(){
