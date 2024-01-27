@@ -1,0 +1,8 @@
+.myButtons{
+    border: none;
+    font-size: 4rem;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: hsl(240, 49%, 67%);
+}
