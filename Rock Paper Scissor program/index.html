@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Learning</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Rock - Paper - Scissor</h1>
+      <div class="hand_container">
+        <button onclick="playGame('rock')" id="rock" class="hands">👊</button>
+        <button onclick="playGame('paper')" id="paper" class="hands">🫲</button>
+        <button onclick="playGame('scissor')" id="scissor" class="hands">
+          ✌️
+        </button>
+      </div>
+      <div class="display_pick">
+        <div id="playerDisplay">Player:</div>
+        <div id="computerDisplay">Computer:</div>
+      </div>
+      <div class="resultDisplay" id="resultDisplay"></div>
+      <div class="display_score">
+        <div id="playerScoreDisplay">Player Score:</div>
+        <div id="computerScorerDisplay">Computer Score:</div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
