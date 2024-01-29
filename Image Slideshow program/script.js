@@ -1,11 +1,11 @@
 // Image Slider
 
-
+//Initialization
 const slides = document.querySelectorAll(".slides img")
 let slideIndex = 0;
 let intervalID = null;
 
-
+// Load Initial Slider
 document.addEventListener("DOMContentLoaded",initialSlider)
 
 function initialSlider(){
@@ -14,8 +14,9 @@ function initialSlider(){
       intervalID= setInterval(nextSlide,5000)
     
     }
-   
 }
+
+// Function to identify the index
 function showSlide(index){
 
   if(index >=slides.length){
@@ -30,7 +31,7 @@ function showSlide(index){
   slides[slideIndex].classList.add("displaySlide")
 }
 
-
+// Prev and Next Button
 function prevSlide(){
   clearInterval(intervalID)
   slideIndex--;
