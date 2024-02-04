@@ -75,3 +75,19 @@ async function doChores(){
 
         
 doChores()
+
+
+
+// Example 2
+
+async function fetchWeather() {
+  try {
+    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY');
+    const data = await response.json();
+    console.log(data.weather[0].description); // Output: "Clear sky" (example)
+  } catch (error) {
+    console.error('Error fetching weather:', error);
+  }
+}
+
+fetchWeather();
