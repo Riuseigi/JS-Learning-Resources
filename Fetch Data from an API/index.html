@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Learning</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__card">
+        <div class="card__name">
+          <h1 id="pokemonNameText">Pokemon Name</h1>
+        </div>
+        <div class="card__image">
+          <img
+            src=""
+            alt="Pokemon Sprite"
+            style="display: none"
+            id="pokemonSprite"
+          />
+        </div>
+        <div class="card__text">
+          <h2 id="pokemonID">ID:</h2>
+          <h2 id="pokemonType">Type:</h2>
+        </div>
+      </div>
+      <div class="container__input">
+        <input
+          type="text"
+          placeholder="Enter Pokemon Name"
+          name=""
+          id="pokemonName"
+        />
+      </div>
+      <div class="container__button">
+        <button onclick="fetchData()">Search Pokemon</button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
