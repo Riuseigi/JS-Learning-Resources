@@ -43,3 +43,24 @@ function hasPairWithSum(arr, target) {
 console.log(hasPairWithSum([1, 2, 3, 4, 5], 9)); // true, because 4 + 5 = 9
 console.log(hasPairWithSum([1, 2, 3, 4, 5], 10)); // false, no pair sums up to 10
 console.log(hasPairWithSum([3, 1, 4, 6], 6)); // true, because 3 + 3 = 6
+
+
+//Machine Problem 2
+
+// You have an array of numbers, and you want to check if any of the numbers are greater than 10. Use the some method to solve this problem.
+
+
+function greaterThan10(arr){
+    let found = false
+    arr.some(num =>{
+        if(num > 10){
+            found = true
+            return found
+        }
+    })
+    return found
+   
+}
+console.log(greaterThan10([1, 2, 3, 4, 5]));
+console.log(greaterThan10([1, 2, 3, 45, 5]));
+console.log(greaterThan10([3, 1, 4, 6]));
