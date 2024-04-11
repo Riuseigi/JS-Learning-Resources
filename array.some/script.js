@@ -64,3 +64,29 @@ function greaterThan10(arr){
 console.log(greaterThan10([1, 2, 3, 4, 5]));
 console.log(greaterThan10([1, 2, 3, 45, 5]));
 console.log(greaterThan10([3, 1, 4, 6]));
+
+
+
+
+//Machine Problem 3
+// You have an array of objects representing people, each with a name and age property. You want to check if any of the people in the array are adults (age 18 or older). Use the some method to solve this problem.
+
+const people = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 17 },
+    { name: 'Charlie', age: 30 },
+    { name: 'David', age: 15 }
+  ];
+
+function isAdult(arr){
+    let found = false
+    arr.some(person =>{
+        if(person.age>=18){
+            found = true
+            return found
+        }
+    })
+    return found;
+}
+
+console.log(isAdult(people))
