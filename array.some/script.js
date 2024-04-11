@@ -28,16 +28,17 @@ const hasExpensiveItems = items.some((item) => item.price > 100);
  * @return {boolean} Whether a pair with the sum is found or not.
  */
 function hasPairWithSum(arr, target) {
-    let found = false;
-    arr.some((num,index)=>{
-        const complement = target - num;
-        if(arr.slice(index+1).includes(complement)){
-            found = true;
-            return found;
-    }
-    
-        })
-return found;}
+    let found = false
+    array.some((num,index)=>{
+        let complement = num - target;
+
+        if(arr.includes(complement)){
+            found = true
+            return found
+        }
+    })
+    return found;
+}
 
 console.log(hasPairWithSum([1, 2, 3, 4, 5], 9)); // true, because 4 + 5 = 9
 console.log(hasPairWithSum([1, 2, 3, 4, 5], 10)); // false, no pair sums up to 10
