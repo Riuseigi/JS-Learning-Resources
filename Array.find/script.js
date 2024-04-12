@@ -24,3 +24,24 @@ const year = 2005
 const book2000 = yearpublished(books,year)
 console.log(book2000);
 
+//Machine problem 2
+// Write a function findPokemonByType(pokemonArray, type) that takes an array of Pokémon objects and a type string as arguments. The function should return the first Pokémon object from the array that has the given type. If no Pokémon with the given type is found, the function should return null.
+const pokemon = [
+  { id: 1, name: 'Bulbasaur', type: 'Grass', hp: 45 },
+  { id: 2, name: 'Charmander', type: 'Fire', hp: 39 },
+  { id: 3, name: 'Squirtle', type: 'Water', hp: 44 },
+  { id: 4, name: 'Pikachu', type: 'Electric', hp: 35 },
+];
+
+function findPokemonByType(pokemons,type){
+
+   return pokemons.find((pokemon) => 
+      pokemon.type === type
+    )
+}
+
+
+console.log(findPokemonByType(pokemon, 'Fire'));  // Output: { id: 2, name: 'Charmander', type: 'Fire', hp: 39 }
+console.log(findPokemonByType(pokemon, 'Bug'));   // Output: null
+
+
