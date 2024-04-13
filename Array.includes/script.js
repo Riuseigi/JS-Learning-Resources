@@ -74,3 +74,45 @@ function findTargetInWords(arr, target, ignoreCase = true) {
 console.log(findTargetInWords(words, target)); // Output: true
 console.log(findTargetInWords(words, target, false)); // Output: false
 
+
+//Machine Problem 3: Write a function that takes two arrays of numbers and returns a new array containing only the unique numbers that are present in both arrays, without duplicates. The order of the numbers in the output array should match their order of appearance in the input arrays.
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 2 , 5, 6, 7];
+
+function findCommonUniqueNumbers(arr1, arr2) {
+    
+    const unique = arr1.map(element =>{
+        if (arr2.includes(element)) {
+            return element;
+          }
+        
+    }).filter(element => element !== undefined);
+    return unique;
+    
+}
+
+console.log(findCommonUniqueNumbers(arr1, arr2)); // Output: [3, 4, 5]
+
+//Challenge: Modify the function to also accept an optional third argument, a boolean flag called sort, which, if true, indicates that the function should sort the output array in ascending order. If sort is not provided, it should default to false.
+
+function findCommonUniqueNumbers(arr1, arr2, sort = false) {
+    const unique = arr1.map(element =>{
+        if (arr2.includes(element)) {
+            return element;
+          }
+        
+    }).filter(element => element !== undefined);
+    if(sort){
+        return unique.sort((a,b) => {
+          return a-b;
+        })
+    }
+    else{
+        return unique;
+    }
+}
+
+console.log(findCommonUniqueNumbers(arr1, arr2)); // Output: [3, 4, 5]
+console.log(findCommonUniqueNumbers(arr1, arr2, true)); // Output: [3, 4, 5]
+
