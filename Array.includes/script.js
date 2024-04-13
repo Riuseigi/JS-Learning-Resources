@@ -34,3 +34,43 @@ function checkNumbersArray(arr,tesArr){
     return tesArr.map(num => arr.includes(num));
 }
 console.log(checkNumbersArray(numbers, testNumbers));
+
+
+//Machine Problem 2: Given an array of strings and a target string, write a function that checks if the target string is included in any of the strings in the array. The function should return true if the target string is found in any of the strings (ignoring case), and false otherwise.
+
+const words = ["apple", "banana", "Orange", "grape"];
+const target = "OrAnGe";
+
+// function findTargetInWords(arr, target) {
+
+//     target = target.toLowerCase();
+//     arr.forEach((element, index, array) => {
+//         array[index] = element.toLowerCase();
+       
+//     });
+//     return arr.includes(target);
+// }
+
+// console.log(findTargetInWords(words, target)); 
+
+//Challenge: Modify the function to also accept an optional third argument, a boolean flag called ignoreCase, which, if true, indicates that the function should perform a case-insensitive search. If ignoreCase is not provided, it should default to true.
+
+function findTargetInWords(arr, target, ignoreCase = true) {
+
+    if(ignoreCase){
+        target = target.toLowerCase();
+        arr.forEach((element, index, array) => {
+            array[index] = element.toLowerCase();
+           
+        });
+        return arr.includes(target);
+    }
+    else{
+        return arr.includes(target);
+    }
+   
+}
+
+console.log(findTargetInWords(words, target)); // Output: true
+console.log(findTargetInWords(words, target, false)); // Output: false
+
