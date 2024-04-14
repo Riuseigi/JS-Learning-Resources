@@ -9,17 +9,32 @@ console.log(array1.every(isBelowThreshold));
 
 //Problem 1: You are given an array of numbers. Write a function that takes the array and a target number, and returns true if every number in the array is greater than the target number, otherwise false.
 
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 
-function isEveryNumberGreaterThanTarget(arr,target){
-     return arr.every((num) => {
-      return num > target;
-    })
+// function isEveryNumberGreaterThanTarget(arr,target){
+//      return arr.every((num) => {
+//       return num > target;
+//     })
+// }
+
+
+// console.log(isEveryNumberGreaterThanTarget(numbers, 5)); // Output: true
+// console.log(isEveryNumberGreaterThanTarget(numbers, 25)); // Output: false
+
+
+//Problem 2: Write a function that takes an array of numbers and returns the sum of all the numbers that are even and greater than 10.
+
+function sumEvenNumbersGreaterThanTen(arr) {
+   let sum = 0
+   arr.every( num =>{
+    if(num %2 === 0 && num>10){
+       sum += num;
+    }
+    return true; // Keep iterating
+   }
+   )
+    return sum;
 }
 
-
-console.log(isEveryNumberGreaterThanTarget(numbers, 5)); // Output: true
-console.log(isEveryNumberGreaterThanTarget(numbers, 25)); // Output: false
-
-
-
+const numbers = [2, 5, 12, 8, 15, 3, 10, 14];
+console.log(sumEvenNumbersGreaterThanTen(numbers)); // Expected output: 36 (12 + 14)
