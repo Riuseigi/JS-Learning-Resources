@@ -176,3 +176,21 @@ const total = getTotalReviewCount(book);
 total;
 
 
+const x =[1,2,3,4,5].map((element) => {
+  return element*2
+})
+x;
+
+const titles = data.map((book)=>{
+  return book.title
+})
+
+titles
+
+const essentialData = data.map((book) => ({
+    title: book.title,
+    author:book.author,
+    reviewsCount: getTotalReviewCount(book)
+}));
+
+essentialData;
