@@ -220,4 +220,28 @@ numbers;
 
 const sortedByPages = data.slice().sort((a,book)=>a.pages-book.pages).map((book => book.title))
 
-sortedByPages
+sortedByPages;
+
+const newBook = {
+  id:6,
+  title: 'Harry Potter and the Chamber of Secrets',
+  author: 'J.K Rowling'
+};
+
+
+//Working With Immutable Array
+// 1) add book object to array
+const booksAdd = [...data, newBook];
+booksAdd;
+
+// 2) Delete book object from array
+
+const bookAfterDelete = booksAdd.filter(book => book.id !==3);
+bookAfterDelete;
+
+
+// 3) Update book object in the array
+
+const bookAfterUpdate = bookAfterDelete.map(book => book.id ===1 ? {...book,pages:1203} : book)
+
+bookAfterUpdate
