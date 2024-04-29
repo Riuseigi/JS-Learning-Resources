@@ -143,7 +143,7 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-const book = getBook(2);
+const book = getBook(3);
 
 const {title, author,pages,publicationDate,genres,hasMovieAdaptation} =book;
 
@@ -163,3 +163,16 @@ updatedBook;
 const summary = `${title} a ${pages}-page long book, was written by ${author} that published in ${publicationDate.split('-')[0]}`;
 
 summary;
+
+
+function getTotalReviewCount(book){
+  const goodread = book.reviews.goodreads.reviewsCount;
+  const librarythings =  book.reviews.librarything?.reviewsCount ?? 0;
+
+  
+}
+const total = getTotalReviewCount(book);
+
+total;
+
+
