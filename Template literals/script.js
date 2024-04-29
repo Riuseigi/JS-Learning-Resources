@@ -209,3 +209,15 @@ adventureBooks;
 const totalofBookspages = data.reduce((acc,book)=> acc + book.pages, 0)
 
 totalofBookspages;
+
+const numbers = [3,7,1,9,6];
+
+//use slice method to not mutate the orignal array;
+const sorted = numbers.slice().sort((a,b)=>a-b)
+
+sorted;
+numbers;
+
+const sortedByPages = data.slice().sort((a,book)=>a.pages-book.pages).map((book => book.title))
+
+sortedByPages
